@@ -30,4 +30,8 @@ export class NyzulNode {
     appendNode(node) {
         this.appendChild(node.element);
     }
+
+    finalize() {
+        return this.element
+    }
 }
