@@ -17,11 +17,11 @@ export class NyzulNode {
 		this.element.appendChild(element)
 	}
 	/**
-     * appends the render output of a component to the DOM tree of this node
+     * appends the finalize() output of a component to the DOM tree of this node
      * @param {Component} component 
      */
 	appendComponent(component) {
-		this.appendChild(component.render())
+		this.appendChild(component.finalize())
 	}
 	/**
      * appends a node to this object
