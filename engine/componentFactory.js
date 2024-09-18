@@ -1,4 +1,4 @@
-import Component from "./component.js"
+import Component from './component.js'
 
 /**
  * 
@@ -33,12 +33,14 @@ export default function createElement(componentDefinition) {
 			element.addEventListener(def.type, def.listener, def.options)
 		}
 	}
-	componentDefinition.children.forEach((node) => {
-		if (node instanceof Component) {
-			element.appendChild(node.render())
-		} else {
-			element.appendChild(node)
-		}
-	})
+	if (componentDefinition.children != null){
+		componentDefinition.children.forEach((node) => {
+			if (node instanceof Component) {
+				element.appendChild(node.finalize())
+			} else {
+				element.appendChild(node)
+			}
+		})
+	}
 	return element
 }
