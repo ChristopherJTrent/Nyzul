@@ -17,14 +17,15 @@ export default class Nyzul extends NyzulNode {
  	* @param {{
 	* 	type?: keyof HTMLElementTagNameMap,
 	* 	id?: string,
-	*  classes?: string[],
+	*   classes?: string[],
 	* 	innerText?: string,
 	* 	attributes?: {[key]: string},
-	*  eventCallbacks?: {
+	*   eventCallbacks?: {
 	* 		type: string,
 	* 		listener: EventListenerOrEventListenerObject,
 	* 		options?: boolean | AddEventListenerOptions
-	* }[]
+	*   }[],
+	*   children?: (Component|HTMLElement)[]
 	* }} componentDefinition 
 	* @returns {ReturnType<createElement>}
 	*/
