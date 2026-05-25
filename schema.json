@@ -5,7 +5,35 @@
 		"NyzulNode": {
 			"type": "object",
 			"properties": {
-				
+				"type": {
+					"type": "string",
+					"description": "a valid HTML tag name"
+				},
+				"id": {
+					"type": "string",
+					"description": "a valid HTML element ID"
+				},
+				"classes": {
+					"type": "array",
+					"items": {
+						"type": "string",
+						"description": "CSS classes for the element"
+					}
+				},
+				"innerText": {
+					"type": "string",
+					"description": "the text content of the element"
+				},
+				"attributes": {
+					"type": "object",
+					"description": "a mapping of attribute names and values."
+				},
+				"children": {
+					"type":"array",
+					"items": {
+						"$ref": "#/definitions/NyzulNode"
+					}
+				}
 			}
 		}
 	}
